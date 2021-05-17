@@ -69,6 +69,30 @@ namespace Assignment2
             return dp;
         }
 
+        public static List<Patient> ShowPatientsByID(string id)
+        {
+            var patients = 
+                from patient in Hospital.patients
+                where patient.ID.Contains(id)
+                select patient;
+
+            List<Patient> p = patients.ToList();
+
+            return p;
+        }
+
+        public static List<Patient> ShowPatientsByName(string name)
+        {
+            var patients =
+                from patient in Hospital.patients
+                where patient.Name.Contains(name)
+                select patient;
+
+            List<Patient> p = patients.ToList();
+
+            return p;
+        }
+
 
     }
 }
