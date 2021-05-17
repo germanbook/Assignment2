@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="JustForTesting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="JustForTesting.Designer.cs">
+      <DependentUpon>JustForTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatePatient2.cs">
       <SubType>Form</SubType>
@@ -92,8 +92,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="JustForTesting.resx">
+      <DependentUpon>JustForTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePatient2.resx">
       <DependentUpon>UpdatePatient2.cs</DependentUpon>
