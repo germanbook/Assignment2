@@ -37,6 +37,7 @@ namespace Assignment2
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1_UpdatePatient
@@ -50,7 +51,8 @@ namespace Assignment2
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7});
             this.listView1_UpdatePatient.FullRowSelect = true;
             this.listView1_UpdatePatient.GridLines = true;
             this.listView1_UpdatePatient.HideSelection = false;
@@ -66,26 +68,35 @@ namespace Assignment2
             // 
             // columnHeader1
             // 
+            this.columnHeader1.DisplayIndex = 1;
             this.columnHeader1.Text = "Name";
             // 
             // columnHeader2
             // 
+            this.columnHeader2.DisplayIndex = 2;
             this.columnHeader2.Text = "Details";
             // 
             // columnHeader3
             // 
+            this.columnHeader3.DisplayIndex = 3;
             this.columnHeader3.Text = "Reason for Visit";
+            this.columnHeader3.Width = 110;
             // 
             // columnHeader4
             // 
+            this.columnHeader4.DisplayIndex = 4;
             this.columnHeader4.Text = "Long Term/Day Patient";
+            this.columnHeader4.Width = 139;
             // 
             // columnHeader5
             // 
+            this.columnHeader5.DisplayIndex = 5;
             this.columnHeader5.Text = "Doctor";
+            this.columnHeader5.Width = 96;
             // 
             // columnHeader6
             // 
+            this.columnHeader6.DisplayIndex = 6;
             this.columnHeader6.Text = "Status";
             this.columnHeader6.Width = 90;
             // 
@@ -98,6 +109,12 @@ namespace Assignment2
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.DisplayIndex = 0;
+            this.columnHeader7.Text = "Patient ID";
+            this.columnHeader7.Width = 75;
             // 
             // UpdatePatient
             // 
@@ -122,5 +139,6 @@ namespace Assignment2
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

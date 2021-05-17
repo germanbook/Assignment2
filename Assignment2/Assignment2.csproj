@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JustForTesting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JustForTesting.Designer.cs">
-      <DependentUpon>JustForTesting.cs</DependentUpon>
-    </Compile>
     <Compile Include="UpdatePatient2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,9 +86,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="JustForTesting.resx">
-      <DependentUpon>JustForTesting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UpdatePatient2.resx">
       <DependentUpon>UpdatePatient2.cs</DependentUpon>
     </EmbeddedResource>

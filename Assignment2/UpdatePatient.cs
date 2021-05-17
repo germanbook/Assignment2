@@ -38,7 +38,8 @@ namespace Assignment2
             listView1_UpdatePatient.Items.Clear();
             for (int i = 0; i < p.Count; i++)
             {
-                listView1_UpdatePatient.Items.Add(p[i].Name);
+                listView1_UpdatePatient.Items.Add(p[i].ID);
+                listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Name);
                 listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Details);
                 listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Rfv);
                 if (p[i].LongTerm == true)
