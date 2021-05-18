@@ -81,11 +81,11 @@ namespace Assignment2
             return p;
         }
 
-        public static List<Patient> ShowPatientsByName(string name)
+        public static List<Patient> ShowPatientsByNameOrID(string nameOrId)
         {
             var patients =
                 from patient in Hospital.patients
-                where patient.Name.Contains(name)
+                where (patient.Name.Contains(nameOrId) || patient.ID.Contains(nameOrId) )
                 select patient;
 
             List<Patient> p = patients.ToList();
