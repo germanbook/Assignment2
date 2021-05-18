@@ -53,5 +53,14 @@ namespace Assignment2
             updatePatient.Show();
             updatePatient.ShowAllPatients();
         }
+
+        private void button5_DischargedPatient_Click(object sender, EventArgs e)
+        {
+            DischargedPatient dPatient = new DischargedPatient(this);
+            this.Hide();
+            dPatient.Show();
+            dPatient.ShowDischargedPatients();
+        }
+
     }
 }

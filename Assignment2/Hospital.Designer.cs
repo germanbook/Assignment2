@@ -84,6 +84,7 @@ namespace Assignment2
             this.button5_DischargedPatient.TabIndex = 5;
             this.button5_DischargedPatient.Text = "Discharged Patient";
             this.button5_DischargedPatient.UseVisualStyleBackColor = true;
+            this.button5_DischargedPatient.Click += new System.EventHandler(this.button5_DischargedPatient_Click);
             // 
             // Hospital
             // 
