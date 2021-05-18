@@ -34,18 +34,24 @@ namespace Assignment2
         {
             List<Patient> p = new List<Patient>();
             p = Functions.ShowAllPatients();
+            this.ShowPatientsListview(p);
+            
+        }
 
+        public void ShowPatientsListview(List<Patient> p)
+        {
             listView1_UpdatePatient.Items.Clear();
             for (int i = 0; i < p.Count; i++)
             {
-                listView1_UpdatePatient.Items.Add(p[i].Name);
+                listView1_UpdatePatient.Items.Add(p[i].ID);
+                listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Name);
                 listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Details);
                 listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Rfv);
                 if (p[i].LongTerm == true)
                 {
                     listView1_UpdatePatient.Items[i].SubItems.Add("Long Term");
                 }
-                else 
+                else
                 {
                     listView1_UpdatePatient.Items[i].SubItems.Add("Day Patietn");
                 }
@@ -58,7 +64,7 @@ namespace Assignment2
                 {
                     listView1_UpdatePatient.Items[i].SubItems.Add("Active");
                 }
-                
+
             }
             if (listView1_UpdatePatient.Items.Count == 0)
                 listView1_UpdatePatient.Items.Add("No Data!");
@@ -74,8 +80,51 @@ namespace Assignment2
 
                     UpdatePatient2 patient = new UpdatePatient2(this);
                     patient.Show();
-                    patient.ShowSelectedPatient(listView1_UpdatePatient.FocusedItem.Index);
+                    patient.ShowSelectedPatient(listView1_UpdatePatient.FocusedItem.Text);
                     this.Hide();
+                }
+            }
+        }
+
+        private void textBox1_searchByName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != (char)13)
+            {
+                return;
+            }
+            else
+            {
+                List<Patient> p = new List<Patient>();
+                p = Functions.ShowPatientsByName(textBox1_searchByName.Text);
+                if (p.Count != 0)
+                {
+                    this.ShowPatientsListview(p);
+                }
+                else
+                {
+                    this.ShowAllPatients();
+                }
+                
+            }
+        }
+
+        private void textBox2_searchByID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != (char)13)
+            {
+                return;
+            }
+            else
+            {
+                List<Patient> p = new List<Patient>();
+                p = Functions.ShowPatientsByID(textBox2_searchByID.Text);
+                if (p.Count != 0)
+                {
+                    this.ShowPatientsListview(p);
+                }
+                else
+                {
+                    this.ShowAllPatients();
                 }
             }
         }

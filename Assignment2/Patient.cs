@@ -8,6 +8,7 @@ namespace Assignment2
 {
     public class Patient
     {
+        public string ID { set; get; }
         public string Name { set; get; }
         public string Details { set; get; }
         public string Rfv { set; get; }
@@ -19,6 +20,7 @@ namespace Assignment2
 
         public Patient( string n, string d, string r, bool longterm, bool discharged, string doc)
         {
+            ID = DateTime.Now.ToString("ddMMyyyyHHmmss");
             Name = n;
             Details = d;
             Rfv = r;
@@ -26,5 +28,6 @@ namespace Assignment2
             Discharged = discharged;
             Doctor = doc;
         }
+
     }
 }
