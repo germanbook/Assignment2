@@ -86,7 +86,7 @@ namespace Assignment2
             }
         }
 
-        private void textBox1_searchByName_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox1_searchByNameOrID_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != (char)13)
             {
@@ -95,7 +95,7 @@ namespace Assignment2
             else
             {
                 List<Patient> p = new List<Patient>();
-                p = Functions.ShowPatientsByName(textBox1_searchByName.Text);
+                p = Functions.ShowPatientsByNameOrID(textBox1_searchByNameOrID.Text);
                 if (p.Count != 0)
                 {
                     this.ShowPatientsListview(p);
@@ -108,25 +108,5 @@ namespace Assignment2
             }
         }
 
-        private void textBox2_searchByID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != (char)13)
-            {
-                return;
-            }
-            else
-            {
-                List<Patient> p = new List<Patient>();
-                p = Functions.ShowPatientsByID(textBox2_searchByID.Text);
-                if (p.Count != 0)
-                {
-                    this.ShowPatientsListview(p);
-                }
-                else
-                {
-                    this.ShowAllPatients();
-                }
-            }
-        }
     }
 }

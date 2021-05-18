@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DischargedPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DischargedPatient.Designer.cs">
+      <DependentUpon>DischargedPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePatient2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DischargedPatient.resx">
+      <DependentUpon>DischargedPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdatePatient2.resx">
       <DependentUpon>UpdatePatient2.cs</DependentUpon>
     </EmbeddedResource>
