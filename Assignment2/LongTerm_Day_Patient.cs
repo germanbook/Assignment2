@@ -17,6 +17,7 @@ namespace Assignment2
         {
             InitializeComponent();
             _hospital = hospital;
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         public void ShowLongTermDayPatients(string button)
@@ -56,6 +57,16 @@ namespace Assignment2
         {
             _hospital.Show();
             this.Hide();
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Assignment2
         public DischargedPatient(Hospital hospital)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             _hospital = hospital;
         }
 
@@ -50,6 +51,16 @@ namespace Assignment2
             }
             if (listView1.Items.Count == 0)
                 listView1.Items.Add("No Data!");
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
     }
 }

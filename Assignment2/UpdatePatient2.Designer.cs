@@ -29,6 +29,7 @@ namespace Assignment2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePatient2));
             this.label1_name = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2_details = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@ namespace Assignment2
             // label1_name
             // 
             this.label1_name.AutoSize = true;
+            this.label1_name.BackColor = System.Drawing.Color.Transparent;
             this.label1_name.Location = new System.Drawing.Point(210, 78);
             this.label1_name.Name = "label1_name";
             this.label1_name.Size = new System.Drawing.Size(35, 13);
@@ -67,6 +69,7 @@ namespace Assignment2
             // label2_details
             // 
             this.label2_details.AutoSize = true;
+            this.label2_details.BackColor = System.Drawing.Color.Transparent;
             this.label2_details.Location = new System.Drawing.Point(210, 127);
             this.label2_details.Name = "label2_details";
             this.label2_details.Size = new System.Drawing.Size(39, 13);
@@ -84,6 +87,7 @@ namespace Assignment2
             // label3_reason
             // 
             this.label3_reason.AutoSize = true;
+            this.label3_reason.BackColor = System.Drawing.Color.Transparent;
             this.label3_reason.Location = new System.Drawing.Point(210, 245);
             this.label3_reason.Name = "label3_reason";
             this.label3_reason.Size = new System.Drawing.Size(44, 13);
@@ -100,6 +104,7 @@ namespace Assignment2
             // label4_doctor
             // 
             this.label4_doctor.AutoSize = true;
+            this.label4_doctor.BackColor = System.Drawing.Color.Transparent;
             this.label4_doctor.Location = new System.Drawing.Point(210, 351);
             this.label4_doctor.Name = "label4_doctor";
             this.label4_doctor.Size = new System.Drawing.Size(39, 13);
@@ -109,24 +114,26 @@ namespace Assignment2
             // radioButton1_dayPatient
             // 
             this.radioButton1_dayPatient.AutoSize = true;
+            this.radioButton1_dayPatient.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1_dayPatient.Location = new System.Drawing.Point(302, 393);
             this.radioButton1_dayPatient.Name = "radioButton1_dayPatient";
             this.radioButton1_dayPatient.Size = new System.Drawing.Size(80, 17);
             this.radioButton1_dayPatient.TabIndex = 8;
             this.radioButton1_dayPatient.TabStop = true;
             this.radioButton1_dayPatient.Text = "Day Patient";
-            this.radioButton1_dayPatient.UseVisualStyleBackColor = true;
+            this.radioButton1_dayPatient.UseVisualStyleBackColor = false;
             // 
             // radioButton2_longTermPatient
             // 
             this.radioButton2_longTermPatient.AutoSize = true;
+            this.radioButton2_longTermPatient.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2_longTermPatient.Location = new System.Drawing.Point(302, 425);
             this.radioButton2_longTermPatient.Name = "radioButton2_longTermPatient";
             this.radioButton2_longTermPatient.Size = new System.Drawing.Size(112, 17);
             this.radioButton2_longTermPatient.TabIndex = 9;
             this.radioButton2_longTermPatient.TabStop = true;
             this.radioButton2_longTermPatient.Text = "Long Term Patient";
-            this.radioButton2_longTermPatient.UseVisualStyleBackColor = true;
+            this.radioButton2_longTermPatient.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
@@ -141,6 +148,10 @@ namespace Assignment2
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(302, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -148,9 +159,15 @@ namespace Assignment2
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // button2_back
             // 
+            this.button2_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2_back.BackgroundImage")));
+            this.button2_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2_back.FlatAppearance.BorderSize = 0;
+            this.button2_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2_back.Location = new System.Drawing.Point(500, 554);
             this.button2_back.Name = "button2_back";
             this.button2_back.Size = new System.Drawing.Size(75, 23);
@@ -170,6 +187,7 @@ namespace Assignment2
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(200, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
@@ -187,6 +205,8 @@ namespace Assignment2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 616);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -203,6 +223,7 @@ namespace Assignment2
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2_details);
             this.Controls.Add(this.label1_name);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdatePatient2";
             this.Text = "Update Patient";
             this.ResumeLayout(false);

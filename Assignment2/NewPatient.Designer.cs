@@ -29,6 +29,7 @@ namespace Assignment2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPatient));
             this.name = new System.Windows.Forms.TextBox();
             this.details = new System.Windows.Forms.TextBox();
             this.rfv = new System.Windows.Forms.TextBox();
@@ -69,6 +70,7 @@ namespace Assignment2
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(239, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -78,6 +80,7 @@ namespace Assignment2
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(239, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
@@ -87,6 +90,7 @@ namespace Assignment2
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(239, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
@@ -95,17 +99,24 @@ namespace Assignment2
             // 
             // button1_newPatient
             // 
-            this.button1_newPatient.Location = new System.Drawing.Point(362, 394);
+            this.button1_newPatient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1_newPatient.BackgroundImage")));
+            this.button1_newPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1_newPatient.FlatAppearance.BorderSize = 0;
+            this.button1_newPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1_newPatient.Location = new System.Drawing.Point(374, 394);
             this.button1_newPatient.Name = "button1_newPatient";
             this.button1_newPatient.Size = new System.Drawing.Size(75, 23);
             this.button1_newPatient.TabIndex = 8;
             this.button1_newPatient.Text = "OK";
             this.button1_newPatient.UseVisualStyleBackColor = true;
             this.button1_newPatient.Click += new System.EventHandler(this.button1_Click);
+            this.button1_newPatient.MouseEnter += new System.EventHandler(this.button1_newPatient_MouseEnter);
+            this.button1_newPatient.MouseLeave += new System.EventHandler(this.button1_newPatient_MouseLeave);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(243, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
@@ -121,41 +132,51 @@ namespace Assignment2
             // 
             // newPatient_back
             // 
-            this.newPatient_back.Location = new System.Drawing.Point(564, 394);
+            this.newPatient_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("newPatient_back.BackgroundImage")));
+            this.newPatient_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.newPatient_back.FlatAppearance.BorderSize = 0;
+            this.newPatient_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newPatient_back.Location = new System.Drawing.Point(563, 394);
             this.newPatient_back.Name = "newPatient_back";
             this.newPatient_back.Size = new System.Drawing.Size(75, 23);
             this.newPatient_back.TabIndex = 11;
             this.newPatient_back.Text = "Back";
             this.newPatient_back.UseVisualStyleBackColor = true;
             this.newPatient_back.Click += new System.EventHandler(this.newPatient_back_Click);
+            this.newPatient_back.MouseEnter += new System.EventHandler(this.newPatient_back_MouseEnter);
+            this.newPatient_back.MouseLeave += new System.EventHandler(this.newPatient_back_MouseLeave);
             // 
             // radioButton1_dayPatient
             // 
             this.radioButton1_dayPatient.AutoSize = true;
+            this.radioButton1_dayPatient.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1_dayPatient.Location = new System.Drawing.Point(337, 318);
             this.radioButton1_dayPatient.Name = "radioButton1_dayPatient";
             this.radioButton1_dayPatient.Size = new System.Drawing.Size(80, 17);
             this.radioButton1_dayPatient.TabIndex = 12;
             this.radioButton1_dayPatient.TabStop = true;
             this.radioButton1_dayPatient.Text = "Day Patient";
-            this.radioButton1_dayPatient.UseVisualStyleBackColor = true;
+            this.radioButton1_dayPatient.UseVisualStyleBackColor = false;
             // 
             // radioButton2_longTermPatient
             // 
             this.radioButton2_longTermPatient.AutoSize = true;
+            this.radioButton2_longTermPatient.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton2_longTermPatient.Checked = true;
             this.radioButton2_longTermPatient.Location = new System.Drawing.Point(337, 350);
             this.radioButton2_longTermPatient.Name = "radioButton2_longTermPatient";
             this.radioButton2_longTermPatient.Size = new System.Drawing.Size(112, 17);
             this.radioButton2_longTermPatient.TabIndex = 13;
             this.radioButton2_longTermPatient.TabStop = true;
             this.radioButton2_longTermPatient.Text = "Long Term Patient";
-            this.radioButton2_longTermPatient.UseVisualStyleBackColor = true;
-            this.radioButton2_longTermPatient.Checked = true;
+            this.radioButton2_longTermPatient.UseVisualStyleBackColor = false;
             // 
             // NewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.radioButton2_longTermPatient);
             this.Controls.Add(this.radioButton1_dayPatient);
@@ -169,6 +190,7 @@ namespace Assignment2
             this.Controls.Add(this.rfv);
             this.Controls.Add(this.details);
             this.Controls.Add(this.name);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewPatient";
             this.Text = "NewPatient";
             this.ResumeLayout(false);

@@ -16,6 +16,7 @@ namespace Assignment2
         public UpdatePatient2(UpdatePatient patient)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             _updatePatient = patient;
         }
 
@@ -84,6 +85,16 @@ namespace Assignment2
 
             MessageBox.Show("Patient has been updated!");
 
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
     }
 }

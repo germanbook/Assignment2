@@ -16,6 +16,7 @@ namespace Assignment2
         public NewPatient(Hospital hospital)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             _hospital = hospital;
         }
 
@@ -31,6 +32,26 @@ namespace Assignment2
         {
             this.Hide();
             _hospital.Show();
+        }
+
+        private void button1_newPatient_MouseEnter(object sender, EventArgs e)
+        {
+            button1_newPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button1_newPatient_MouseLeave(object sender, EventArgs e)
+        {
+            button1_newPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void newPatient_back_MouseEnter(object sender, EventArgs e)
+        {
+            newPatient_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void newPatient_back_MouseLeave(object sender, EventArgs e)
+        {
+            newPatient_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
     }
 }

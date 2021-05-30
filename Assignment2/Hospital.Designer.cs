@@ -35,7 +35,8 @@ namespace Assignment2
             this.button3 = new System.Windows.Forms.Button();
             this.button4_UpdatePatient = new System.Windows.Forms.Button();
             this.button5_DischargedPatient = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -44,7 +45,11 @@ namespace Assignment2
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(322, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 23);
@@ -52,10 +57,8 @@ namespace Assignment2
             this.button1.Text = "Long Term Patient";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
             // 
             // button2
             // 
@@ -70,6 +73,8 @@ namespace Assignment2
             this.button2.Text = "Day Patient";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // button3
             // 
@@ -84,6 +89,8 @@ namespace Assignment2
             this.button3.Text = "New Patient";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // button4_UpdatePatient
             // 
@@ -98,6 +105,8 @@ namespace Assignment2
             this.button4_UpdatePatient.Text = "Update Patient";
             this.button4_UpdatePatient.UseVisualStyleBackColor = true;
             this.button4_UpdatePatient.Click += new System.EventHandler(this.button4_UpdatePatient_Click);
+            this.button4_UpdatePatient.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.button4_UpdatePatient.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
             // button5_DischargedPatient
             // 
@@ -112,16 +121,19 @@ namespace Assignment2
             this.button5_DischargedPatient.Text = "Discharged Patient";
             this.button5_DischargedPatient.UseVisualStyleBackColor = true;
             this.button5_DischargedPatient.Click += new System.EventHandler(this.button5_DischargedPatient_Click);
+            this.button5_DischargedPatient.MouseEnter += new System.EventHandler(this.button5_DischargedPatient_Click_MouseEnter);
+            this.button5_DischargedPatient.MouseLeave += new System.EventHandler(this.button5_DischargedPatient_Click_MouseLeave);
             // 
-            // groupBox1
+            // pictureBox1
             // 
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.groupBox1.Location = new System.Drawing.Point(12, 328);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 187);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 374);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 141);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Hospital
             // 
@@ -130,16 +142,18 @@ namespace Assignment2
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 527);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(745, 527);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5_DischargedPatient);
             this.Controls.Add(this.button4_UpdatePatient);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Hospital";
             this.Text = "Hospital";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,7 +165,7 @@ namespace Assignment2
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4_UpdatePatient;
         private System.Windows.Forms.Button button5_DischargedPatient;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

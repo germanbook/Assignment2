@@ -16,12 +16,44 @@ namespace Assignment2
         public UpdatePatient(Hospital hospital)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             _hospital = hospital;
         }
 
         private void listView1_UpdatePatient_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            List<Patient> p = Hospital.patients.Where( patient => patient.Name.Contains(textBox1_searchByNameOrID.Text) || 
+                                             patient.ID.Contains(textBox1_searchByNameOrID.Text)).ToList();
+            if (textBox1_searchByNameOrID.Text != "")
+            {
+                if (p.Count != 0)
+                {
+                    label2_NoResultFound.Visible = false;
+                    label2_Match.Visible = true;
+                    this.ShowPatientsListview(p);
+                    if (p.Count == 1)
+                    {
+                        label2_Match.Text = p.Count + " match";
+                    }
+                    else
+                    {
+                        label2_Match.Text = p.Count + " matches";
+                    }
+
+                }
+                else
+                {
+                    label2_NoResultFound.Visible = true;
+                    label2_Match.Visible = false;
+                }
+            }
+            else
+            {
+                this.ShowAllPatients();
+                label2_NoResultFound.Visible = label2_Match.Visible = false;
+            }
+                
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,8 +64,7 @@ namespace Assignment2
 
         public void ShowAllPatients()
         {
-            List<Patient> p = new List<Patient>();
-            p = Functions.ShowAllPatients();
+            List<Patient> p = Functions.ShowAllPatients();
             this.ShowPatientsListview(p);
             
         }
@@ -86,27 +117,14 @@ namespace Assignment2
             }
         }
 
-        private void textBox1_searchByNameOrID_KeyPress(object sender, KeyPressEventArgs e)
+        private void button1_MouseEnter(object sender, EventArgs e)
         {
-            if (e.KeyChar != (char)13)
-            {
-                return;
-            }
-            else
-            {
-                List<Patient> p = new List<Patient>();
-                p = Functions.ShowPatientsByNameOrID(textBox1_searchByNameOrID.Text);
-                if (p.Count != 0)
-                {
-                    this.ShowPatientsListview(p);
-                }
-                else
-                {
-                    this.ShowAllPatients();
-                }
-                
-            }
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
     }
 }

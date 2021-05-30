@@ -17,6 +17,7 @@ namespace Assignment2
         public Hospital()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         // show long term patient
@@ -64,22 +65,52 @@ namespace Assignment2
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_MouseDown(object sender, MouseEventArgs e)
-        {
-
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-
+            button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
 
-        private void button1_MouseUp(object sender, MouseEventArgs e)
+        private void button2_MouseEnter(object sender, EventArgs e)
         {
+            button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
 
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+            button4_UpdatePatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center; 
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            button4_UpdatePatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void button5_DischargedPatient_Click_MouseEnter(object sender, EventArgs e)
+        {
+            button5_DischargedPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button5_DischargedPatient_Click_MouseLeave(object sender, EventArgs e)
+        {
+            button5_DischargedPatient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
     }
 }
