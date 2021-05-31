@@ -1,4 +1,4 @@
-# Assignment2
+# Assignment2 - Patient Register
 
 This is a patient registry for a hospital.
 
@@ -18,5 +18,5 @@ New patients are given a unique ID based on system date and time.
 Limitations
 ----------------------
 The lists do not have sorting capability, users are expected to use the search function.
-The app does not have authentication function.
+The app does not have an authentication function.
 Patients cannot be searched by doctor, that is out of the scope for this app.
