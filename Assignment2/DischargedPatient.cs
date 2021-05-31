@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace Assignment2
 {
+    /**
+    * Discharged patient
+    * Display discharged patient
+    * 
+    */
     public partial class DischargedPatient : Form
     {
         Hospital _hospital;
@@ -20,12 +25,14 @@ namespace Assignment2
             _hospital = hospital;
         }
 
+        // Back to main menu
         private void button1_Click(object sender, EventArgs e)
         {
             _hospital.Show();
             this.Hide();
         }
 
+        // Display discharged patient
         public void ShowDischargedPatients()
         {
             List<Patient> p  = Functions.ShowDischargedPatients();
@@ -53,11 +60,13 @@ namespace Assignment2
                 listView1.Items.Add("No Data!");
         }
 
+        // Mouse hover effects on button
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
+        // Mouse hover effects on button
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

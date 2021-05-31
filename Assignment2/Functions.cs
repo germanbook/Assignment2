@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
+    /**
+    * Functions
+    * Including some basics functions
+    * 
+    */
     public static class Functions
     {
         
-
+        // Display day patients
         public static List<Patient> ShowDayPatients()
         {
             var dayPatients =
@@ -22,6 +27,7 @@ namespace Assignment2
             return dp;
         }
 
+        // Display long-term patients
         public static List<Patient> ShowLongTermPatients()
         {
             var longTermPatient =
@@ -34,6 +40,7 @@ namespace Assignment2
             return lp;
         }
 
+        // Display discharged patients
         public static List<Patient> ShowDischargedPatients()
         {
             var dischargedPatients =
@@ -46,6 +53,7 @@ namespace Assignment2
             return dcp;
         }
 
+        // Display active patients
         public static List<Patient> ShowActivePatients()
         {
             var activePatients =
@@ -58,6 +66,7 @@ namespace Assignment2
             return ap;
         }
 
+        // Display all patients
         public static List<Patient> ShowAllPatients()
         {
             var dayPatients =
@@ -69,6 +78,7 @@ namespace Assignment2
             return dp;
         }
 
+        // Display patients by ID
         public static List<Patient> ShowPatientsByID(string id)
         {
             var patients = 

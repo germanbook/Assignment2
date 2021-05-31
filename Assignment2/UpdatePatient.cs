@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace Assignment2
 {
+    /**
+    * Update patient
+    * Show patient list by doubleclick one of them gose
+    * to edit form
+    * Search patient by ID or name
+    */
     public partial class UpdatePatient : Form
     {
         Hospital _hospital;
@@ -20,10 +26,13 @@ namespace Assignment2
             _hospital = hospital;
         }
 
+        public UpdatePatient(){}
+
+        // Search patient by ID or name
         private void listView1_UpdatePatient_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            List<Patient> p = Hospital.patients.Where( patient => patient.Name.Contains(textBox1_searchByNameOrID.Text) || 
+            List<Patient> p = Hospital.patients.Where( patient => patient.Name.Contains(textBox1_searchByNameOrID.Text) | 
                                              patient.ID.Contains(textBox1_searchByNameOrID.Text)).ToList();
             if (textBox1_searchByNameOrID.Text != "")
             {
@@ -56,12 +65,14 @@ namespace Assignment2
                 
         }
 
+        // Back to main menu
         private void button1_Click(object sender, EventArgs e)
         {
             _hospital.Show();
             this.Hide();
         }
 
+        // Display all patient
         public void ShowAllPatients()
         {
             List<Patient> p = Functions.ShowAllPatients();
@@ -69,6 +80,7 @@ namespace Assignment2
             
         }
 
+        // Display matched patient by search
         public void ShowPatientsListview(List<Patient> p)
         {
             listView1_UpdatePatient.Items.Clear();
@@ -84,7 +96,7 @@ namespace Assignment2
                 }
                 else
                 {
-                    listView1_UpdatePatient.Items[i].SubItems.Add("Day Patietn");
+                    listView1_UpdatePatient.Items[i].SubItems.Add("Day Patient");
                 }
                 listView1_UpdatePatient.Items[i].SubItems.Add(p[i].Doctor);
                 if (p[i].Discharged == true)
@@ -101,6 +113,7 @@ namespace Assignment2
                 listView1_UpdatePatient.Items.Add("No Data!");
         }
 
+        // Mouse double click item to goes to edit form
         private void listView1_UpdatePatient_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
@@ -117,11 +130,13 @@ namespace Assignment2
             }
         }
 
+        // Mouse hover effects on button
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
+        // Mouse hover effects on button
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

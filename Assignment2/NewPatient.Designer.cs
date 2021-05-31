@@ -42,6 +42,7 @@ namespace Assignment2
             this.newPatient_back = new System.Windows.Forms.Button();
             this.radioButton1_dayPatient = new System.Windows.Forms.RadioButton();
             this.radioButton2_longTermPatient = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // name
@@ -73,9 +74,9 @@ namespace Assignment2
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(239, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Name";
+            this.label1.Text = "Name*";
             // 
             // label2
             // 
@@ -93,9 +94,9 @@ namespace Assignment2
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(239, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Resan for visit";
+            this.label3.Text = "Resan for visit*";
             // 
             // button1_newPatient
             // 
@@ -171,6 +172,17 @@ namespace Assignment2
             this.radioButton2_longTermPatient.Text = "Long Term Patient";
             this.radioButton2_longTermPatient.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(622, 354);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "* = Required fields";
+            // 
             // NewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +190,7 @@ namespace Assignment2
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.radioButton2_longTermPatient);
             this.Controls.Add(this.radioButton1_dayPatient);
             this.Controls.Add(this.newPatient_back);
@@ -212,5 +225,6 @@ namespace Assignment2
         private System.Windows.Forms.Button newPatient_back;
         private System.Windows.Forms.RadioButton radioButton1_dayPatient;
         private System.Windows.Forms.RadioButton radioButton2_longTermPatient;
+        private System.Windows.Forms.Label label5;
     }
 }

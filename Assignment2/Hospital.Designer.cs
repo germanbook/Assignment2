@@ -102,7 +102,7 @@ namespace Assignment2
             this.button4_UpdatePatient.Name = "button4_UpdatePatient";
             this.button4_UpdatePatient.Size = new System.Drawing.Size(116, 23);
             this.button4_UpdatePatient.TabIndex = 4;
-            this.button4_UpdatePatient.Text = "Update Patient";
+            this.button4_UpdatePatient.Text = "Search and Update";
             this.button4_UpdatePatient.UseVisualStyleBackColor = true;
             this.button4_UpdatePatient.Click += new System.EventHandler(this.button4_UpdatePatient_Click);
             this.button4_UpdatePatient.MouseEnter += new System.EventHandler(this.button4_MouseEnter);

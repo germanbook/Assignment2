@@ -38,6 +38,10 @@ namespace Assignment2
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
+            this.label2_Match = new System.Windows.Forms.Label();
+            this.label2_NoResultFound = new System.Windows.Forms.Label();
+            this.textBox1_searchByNameOrID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listView1_Patients
@@ -55,9 +59,9 @@ namespace Assignment2
             this.listView1_Patients.FullRowSelect = true;
             this.listView1_Patients.GridLines = true;
             this.listView1_Patients.HideSelection = false;
-            this.listView1_Patients.Location = new System.Drawing.Point(12, 12);
+            this.listView1_Patients.Location = new System.Drawing.Point(12, 42);
             this.listView1_Patients.Name = "listView1_Patients";
-            this.listView1_Patients.Size = new System.Drawing.Size(776, 384);
+            this.listView1_Patients.Size = new System.Drawing.Size(776, 354);
             this.listView1_Patients.TabIndex = 0;
             this.listView1_Patients.UseCompatibleStateImageBehavior = false;
             this.listView1_Patients.View = System.Windows.Forms.View.Details;
@@ -107,6 +111,46 @@ namespace Assignment2
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
+            // label2_Match
+            // 
+            this.label2_Match.AutoSize = true;
+            this.label2_Match.BackColor = System.Drawing.Color.Transparent;
+            this.label2_Match.Location = new System.Drawing.Point(283, 15);
+            this.label2_Match.Name = "label2_Match";
+            this.label2_Match.Size = new System.Drawing.Size(37, 13);
+            this.label2_Match.TabIndex = 9;
+            this.label2_Match.Text = "Match";
+            this.label2_Match.Visible = false;
+            // 
+            // label2_NoResultFound
+            // 
+            this.label2_NoResultFound.AutoSize = true;
+            this.label2_NoResultFound.BackColor = System.Drawing.Color.Transparent;
+            this.label2_NoResultFound.Location = new System.Drawing.Point(271, 15);
+            this.label2_NoResultFound.Name = "label2_NoResultFound";
+            this.label2_NoResultFound.Size = new System.Drawing.Size(87, 13);
+            this.label2_NoResultFound.TabIndex = 8;
+            this.label2_NoResultFound.Text = "No Result Found";
+            this.label2_NoResultFound.Visible = false;
+            // 
+            // textBox1_searchByNameOrID
+            // 
+            this.textBox1_searchByNameOrID.Location = new System.Drawing.Point(126, 12);
+            this.textBox1_searchByNameOrID.Name = "textBox1_searchByNameOrID";
+            this.textBox1_searchByNameOrID.Size = new System.Drawing.Size(118, 20);
+            this.textBox1_searchByNameOrID.TabIndex = 7;
+            this.textBox1_searchByNameOrID.TextChanged += new System.EventHandler(this.textBox1_searchByNameOrID_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Search by Name or ID";
+            // 
             // LongTerm_Day_Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,12 +158,17 @@ namespace Assignment2
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2_Match);
+            this.Controls.Add(this.label2_NoResultFound);
+            this.Controls.Add(this.textBox1_searchByNameOrID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1_Patients);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LongTerm_Day_Patient";
             this.Text = "Patients";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +182,9 @@ namespace Assignment2
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Label label2_Match;
+        private System.Windows.Forms.Label label2_NoResultFound;
+        private System.Windows.Forms.TextBox textBox1_searchByNameOrID;
+        private System.Windows.Forms.Label label1;
     }
 }

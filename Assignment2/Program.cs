@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace Assignment2
 {
+    /**
+     * Program
+     * The main entry point for the application
+     */
     static class Program
     {
         /// <summary>

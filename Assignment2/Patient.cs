@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
+    /**
+     * Patient Class
+     * Patient Fields and constructors
+     * 
+     */
     public class Patient
     {
         public string ID { set; get; }
@@ -16,8 +21,10 @@ namespace Assignment2
         public bool Discharged { set; get; }
         public string Doctor { set; get; }
 
+        // Default constructors
         public Patient() { }
 
+        // Parameterized constructor
         public Patient( string n, string d, string r, bool longterm, bool discharged, string doc)
         {
             ID = DateTime.Now.ToString("ddMMyyyyHHmmss");
