@@ -23,6 +23,7 @@ namespace Assignment2
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             _hospital = hospital;
+            this.ControlBox = false;
         }
 
         // Back to main menu

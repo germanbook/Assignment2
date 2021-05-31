@@ -24,6 +24,7 @@ namespace Assignment2
             InitializeComponent();
             _hospital = hospital;
             StartPosition = FormStartPosition.CenterScreen;
+            this.ControlBox = false;
         }
 
         // Display long-term patient or day patient

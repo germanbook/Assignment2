@@ -156,7 +156,7 @@ namespace Assignment2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Save";
+            this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
@@ -223,6 +223,7 @@ namespace Assignment2
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2_details);
             this.Controls.Add(this.label1_name);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdatePatient2";
             this.Text = "Update Patient";

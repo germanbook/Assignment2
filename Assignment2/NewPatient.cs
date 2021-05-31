@@ -22,6 +22,7 @@ namespace Assignment2
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             _hospital = hospital;
+            this.ControlBox = false;
         }
 
         // New a patient
@@ -72,5 +73,6 @@ namespace Assignment2
         {
             newPatient_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
+
     }
 }

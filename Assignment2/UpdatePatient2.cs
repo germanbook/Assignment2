@@ -22,6 +22,7 @@ namespace Assignment2
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             _updatePatient = patient;
+            this.ControlBox = false;
         }
 
         // Display selected patient details

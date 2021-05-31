@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{693564F7-4944-4C58-953B-241B5CFD4A41}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Assignment2</RootNamespace>
     <AssemblyName>Assignment2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -55,6 +55,12 @@
     <Compile Include="DischargedPatient.Designer.cs">
       <DependentUpon>DischargedPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaveData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveData.Designer.cs">
+      <DependentUpon>SaveData.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePatient2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DischargedPatient.resx">
       <DependentUpon>DischargedPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveData.resx">
+      <DependentUpon>SaveData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePatient2.resx">
       <DependentUpon>UpdatePatient2.cs</DependentUpon>

@@ -18,7 +18,7 @@ namespace Assignment2
      */
     public partial class Hospital : Form
     {
-        public static List<Patient> patients = new List<Patient>();
+        public static List<Patient> patients = Functions.LoadingData();
 
         public Hospital()
         {
@@ -129,6 +129,62 @@ namespace Assignment2
         private void button3_MouseLeave(object sender, EventArgs e)
         {
             button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void pictureBox2_Save_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox2_Save.BackgroundImage = pictureBox_MouseEnter.BackgroundImage;
+        }
+
+        private void pictureBox2_Save_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2_Save.BackgroundImage = pictureBox_MouseLeave.BackgroundImage;
+        }
+
+        private void button4_Exit_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (Functions.IfDataSame())
+            {
+                this.Dispose();
+            }
+            else
+            {
+                SaveData save = new SaveData(this);
+                save.Show();
+                this.Hide();
+            }
+            
+        }
+
+        private void pictureBox2_Save_MouseClick(object sender, MouseEventArgs e)
+        {
+            Functions.SaveData();
+            MessageBox.Show("Data saved !");
+        }
+
+        private void button4_Exit_MouseEnter(object sender, EventArgs e)
+        {
+            button4_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+        }
+
+        private void button4_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            button4_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        }
+
+        private void Hospital_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Functions.IfDataSame())
+            {
+                this.Dispose();
+            }
+            else
+            {
+                e.Cancel = true;
+                SaveData save = new SaveData(this);
+                save.Show();
+                this.Hide();
+            }
         }
     }
 }

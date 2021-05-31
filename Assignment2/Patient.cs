@@ -25,7 +25,7 @@ namespace Assignment2
         public Patient() { }
 
         // Parameterized constructor
-        public Patient( string n, string d, string r, bool longterm, bool discharged, string doc)
+        public Patient(string n, string d, string r, bool longterm, bool discharged, string doc)
         {
             ID = DateTime.Now.ToString("ddMMyyyyHHmmss");
             Name = n;
@@ -36,5 +36,60 @@ namespace Assignment2
             Doctor = doc;
         }
 
-    }
+        // Parameterized constructor for data loading
+        public Patient(string id, string n, string d, string r, bool longterm, bool discharged, string doc)
+        {
+            ID = id;
+            Name = n;
+            Details = d;
+            Rfv = r;
+            LongTerm = longterm;
+            Discharged = discharged;
+            Doctor = doc;
+        }
+
+        // Override Equals
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            Patient p = obj as Patient;
+            if (p == null)
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(p);
+            }
+                
+        }
+
+        // Override GetHashCode
+        public override int GetHashCode()
+        {
+            return ID.GetHashCode() ^ Name.GetHashCode();
+        }
+
+        // Recall Equals
+        public bool Equals(Patient p)
+        {
+            if (p == null)
+            {
+                return false;
+            } 
+            return (
+                    this.ID == p.ID &&
+                    this.Name == p.Name &&
+                    this.Details == p.Details &&
+                    this.Rfv == p.Rfv &&
+                    this.LongTerm == p.LongTerm &&
+                    this.Discharged == p.Discharged &&
+                    this.Doctor == p.Doctor
+                    );
+        }
+
+    }   
 }

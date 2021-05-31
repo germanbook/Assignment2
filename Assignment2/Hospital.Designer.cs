@@ -36,7 +36,15 @@ namespace Assignment2
             this.button4_UpdatePatient = new System.Windows.Forms.Button();
             this.button5_DischargedPatient = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2_Save = new System.Windows.Forms.PictureBox();
+            this.pictureBox_MouseEnter = new System.Windows.Forms.PictureBox();
+            this.pictureBox_MouseLeave = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4_Exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Save)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MouseEnter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MouseLeave)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -82,7 +90,7 @@ namespace Assignment2
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(322, 345);
+            this.button3.Location = new System.Drawing.Point(322, 324);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 23);
             this.button3.TabIndex = 3;
@@ -135,6 +143,72 @@ namespace Assignment2
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2_Save
+            // 
+            this.pictureBox2_Save.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2_Save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2_Save.BackgroundImage")));
+            this.pictureBox2_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2_Save.Location = new System.Drawing.Point(48, 46);
+            this.pictureBox2_Save.Name = "pictureBox2_Save";
+            this.pictureBox2_Save.Size = new System.Drawing.Size(63, 60);
+            this.pictureBox2_Save.TabIndex = 7;
+            this.pictureBox2_Save.TabStop = false;
+            this.pictureBox2_Save.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_Save_MouseClick);
+            this.pictureBox2_Save.MouseEnter += new System.EventHandler(this.pictureBox2_Save_MouseEnter);
+            this.pictureBox2_Save.MouseLeave += new System.EventHandler(this.pictureBox2_Save_MouseLeave);
+            // 
+            // pictureBox_MouseEnter
+            // 
+            this.pictureBox_MouseEnter.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_MouseEnter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_MouseEnter.BackgroundImage")));
+            this.pictureBox_MouseEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_MouseEnter.Location = new System.Drawing.Point(117, 46);
+            this.pictureBox_MouseEnter.Name = "pictureBox_MouseEnter";
+            this.pictureBox_MouseEnter.Size = new System.Drawing.Size(58, 60);
+            this.pictureBox_MouseEnter.TabIndex = 9;
+            this.pictureBox_MouseEnter.TabStop = false;
+            this.pictureBox_MouseEnter.Visible = false;
+            // 
+            // pictureBox_MouseLeave
+            // 
+            this.pictureBox_MouseLeave.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_MouseLeave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_MouseLeave.BackgroundImage")));
+            this.pictureBox_MouseLeave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_MouseLeave.Location = new System.Drawing.Point(117, 46);
+            this.pictureBox_MouseLeave.Name = "pictureBox_MouseLeave";
+            this.pictureBox_MouseLeave.Size = new System.Drawing.Size(58, 60);
+            this.pictureBox_MouseLeave.TabIndex = 10;
+            this.pictureBox_MouseLeave.TabStop = false;
+            this.pictureBox_MouseLeave.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Save";
+            // 
+            // button4_Exit
+            // 
+            this.button4_Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4_Exit.BackgroundImage")));
+            this.button4_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4_Exit.FlatAppearance.BorderSize = 0;
+            this.button4_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4_Exit.Location = new System.Drawing.Point(322, 415);
+            this.button4_Exit.Name = "button4_Exit";
+            this.button4_Exit.Size = new System.Drawing.Size(116, 23);
+            this.button4_Exit.TabIndex = 12;
+            this.button4_Exit.Text = "Exit";
+            this.button4_Exit.UseVisualStyleBackColor = true;
+            this.button4_Exit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button4_Exit_MouseClick);
+            this.button4_Exit.MouseEnter += new System.EventHandler(this.button4_Exit_MouseEnter);
+            this.button4_Exit.MouseLeave += new System.EventHandler(this.button4_Exit_MouseLeave);
+            // 
             // Hospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +217,11 @@ namespace Assignment2
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(745, 527);
+            this.Controls.Add(this.button4_Exit);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox_MouseLeave);
+            this.Controls.Add(this.pictureBox_MouseEnter);
+            this.Controls.Add(this.pictureBox2_Save);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5_DischargedPatient);
             this.Controls.Add(this.button4_UpdatePatient);
@@ -151,10 +230,16 @@ namespace Assignment2
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Hospital";
             this.Text = "Hospital";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hospital_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Save)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MouseEnter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MouseLeave)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -166,6 +251,11 @@ namespace Assignment2
         private System.Windows.Forms.Button button4_UpdatePatient;
         private System.Windows.Forms.Button button5_DischargedPatient;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2_Save;
+        private System.Windows.Forms.PictureBox pictureBox_MouseEnter;
+        private System.Windows.Forms.PictureBox pictureBox_MouseLeave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4_Exit;
     }
 }
 
