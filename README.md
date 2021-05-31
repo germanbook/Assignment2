@@ -22,6 +22,7 @@ Required fields are marked and must be filled, if they are not filled, an alert 
 
 New patients are given a unique ID based on system date and time.
 
+
 Limitations
 ----------------------
 The lists do not have sorting capability, users are expected to use the search function.
