@@ -79,6 +79,7 @@ namespace Assignment2
             return p;
         }
 
+        // LoadingData from csv file
         public static List<Patient> LoadingData()
         {
             List<Patient> p = new List<Patient>();
