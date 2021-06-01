@@ -79,6 +79,7 @@ namespace Assignment2
             return p;
         }
 
+        // LoadingData from csv file
         public static List<Patient> LoadingData()
         {
             List<Patient> p = new List<Patient>();
@@ -110,13 +111,13 @@ namespace Assignment2
             return b;
         }
 
-        // Store data to excel file
+        // Store data to csv file
         public static void SaveData()
         {
             
             var path = @"../../datafiles/Data.csv";
-            FileStream fs = new FileStream(path, System.IO.FileMode.Create, System.IO.FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8);
+            FileStream stream = new FileStream(path, System.IO.FileMode.Create, System.IO.FileAccess.Write);
+            StreamWriter writer = new StreamWriter(stream, System.Text.Encoding.UTF8);
 
             for (int i = 0; i < Hospital.patients.Count; i++)
             {
@@ -128,9 +129,9 @@ namespace Assignment2
                 dataStr += Hospital.patients[i].LongTerm.ToString() + ",";
                 dataStr += Hospital.patients[i].Discharged.ToString() + ",";
                 dataStr += Hospital.patients[i].Doctor.ToString();
-                sw.WriteLine(dataStr);
+                writer.WriteLine(dataStr);
             }
-            sw.Close();
+            writer.Close();
 
         }
     }

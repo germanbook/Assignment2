@@ -27,8 +27,6 @@ namespace Assignment2
             this.ControlBox = false;
         }
 
-        public UpdatePatient(){}
-
         // Search patient by ID or name
         private void listView1_UpdatePatient_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -131,16 +131,19 @@ namespace Assignment2
             button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
 
+        // Mouse hover effects on button
         private void pictureBox2_Save_MouseEnter(object sender, EventArgs e)
         {
             pictureBox2_Save.BackgroundImage = pictureBox_MouseEnter.BackgroundImage;
         }
 
+        // Mouse hover effects on button
         private void pictureBox2_Save_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2_Save.BackgroundImage = pictureBox_MouseLeave.BackgroundImage;
         }
 
+        // Exit button
         private void button4_Exit_MouseClick(object sender, MouseEventArgs e)
         {
             if (Functions.IfDataSame())
@@ -156,22 +159,26 @@ namespace Assignment2
             
         }
 
+        // Save data button
         private void pictureBox2_Save_MouseClick(object sender, MouseEventArgs e)
         {
             Functions.SaveData();
             MessageBox.Show("Data saved !");
         }
 
+        // Mouse hover effects on button
         private void button4_Exit_MouseEnter(object sender, EventArgs e)
         {
             button4_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
+        // Mouse hover effects on button
         private void button4_Exit_MouseLeave(object sender, EventArgs e)
         {
             button4_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
 
+        // Form Close
         private void Hospital_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (Functions.IfDataSame())
