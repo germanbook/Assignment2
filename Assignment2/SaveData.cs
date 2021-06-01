@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace Assignment2
 {
+    /**
+     * Save date form
+     * Reminder user save data
+     * 
+     */
     public partial class SaveData : Form
     {
         Hospital _hospital;
@@ -21,6 +26,7 @@ namespace Assignment2
             this.ControlBox = false;
         }
 
+        // Save
         private void button1_Save_MouseClick(object sender, MouseEventArgs e)
         {
             Functions.SaveData();
@@ -29,27 +35,32 @@ namespace Assignment2
             _hospital.Close();
         }
 
+        // Exit
         private void button2_Exit_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
-            _hospital.Close();
+            _hospital.Dispose();
         }
 
+        // Mouse hover effects on button
         private void button1_Save_MouseEnter(object sender, EventArgs e)
         {
             button1_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
-
+        
+        // Mouse hover effects on button
         private void button1_Save_MouseLeave(object sender, EventArgs e)
         {
             button1_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
-
+        
+        // Mouse hover effects on button
         private void button2_Exit_MouseEnter(object sender, EventArgs e)
         {
             button2_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
+        // Mouse hover effects on button
         private void button2_Exit_MouseLeave(object sender, EventArgs e)
         {
             button2_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
