@@ -84,7 +84,7 @@ namespace Assignment2
         {
             List<Patient> p = new List<Patient>();
             
-            var path = @"../../datafiles/Data.csv";
+            var path = @"Data.csv";
             string[] lines = System.IO.File.ReadAllLines(path);
 
             foreach (string line in lines)
@@ -115,7 +115,7 @@ namespace Assignment2
         public static void SaveData()
         {
             
-            var path = @"../../datafiles/Data.csv";
+            var path = @"Data.csv";
             FileStream stream = new FileStream(path, System.IO.FileMode.Create, System.IO.FileAccess.Write);
             StreamWriter writer = new StreamWriter(stream, System.Text.Encoding.UTF8);
 
