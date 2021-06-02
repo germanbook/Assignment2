@@ -29,7 +29,14 @@ namespace Assignment2
         // Save
         private void button1_Save_MouseClick(object sender, MouseEventArgs e)
         {
-            Functions.SaveData();
+            try
+            {
+                Functions.SaveData();
+            }
+            catch
+            {
+                MessageBox.Show("Data File not found");
+            }
             MessageBox.Show("Data saved !");
             this.Close();
             _hospital.Close();

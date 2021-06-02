@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Assignment2
 {
@@ -14,7 +15,7 @@ namespace Assignment2
     */
     public static class Functions
     {
-        
+        const string path = @"../../datafile/Data.csv";
         // Display day patients
         public static List<Patient> ShowDayPatients()
         {
@@ -83,23 +84,33 @@ namespace Assignment2
         public static List<Patient> LoadingData()
         {
             List<Patient> p = new List<Patient>();
-            
-            var path = @"Data.csv";
-            string[] lines = System.IO.File.ReadAllLines(path);
-
-            foreach (string line in lines)
+            try
             {
-                string[] info = line.Split(',');
 
-                p.Add(new Patient(info[0],
-                                  info[1],
-                                  info[2],
-                                  info[3],
-                                  Convert.ToBoolean(info[4]),
-                                  Convert.ToBoolean(info[5]),
-                                  info[6]
-                                  )
-                     );
+                string[] lines = System.IO.File.ReadAllLines(path);
+
+                foreach (string line in lines)
+                {
+                    string[] info = line.Split(',');
+
+                    p.Add(new Patient(info[0],
+                                      info[1],
+                                      info[2],
+                                      info[3],
+                                      Convert.ToBoolean(info[4]),
+                                      Convert.ToBoolean(info[5]),
+                                      info[6]
+                                      )
+                         );
+                }
+                
+            } 
+            catch
+            {
+                MessageBox.Show("Data File not found");
+                System.Diagnostics.Process process
+                    = System.Diagnostics.Process.GetProcessById(System.Diagnostics.Process.GetCurrentProcess().Id);
+                process.Kill();
             }
             return p;
         }
@@ -114,24 +125,31 @@ namespace Assignment2
         // Store data to csv file
         public static void SaveData()
         {
-            
-            var path = @"Data.csv";
-            FileStream stream = new FileStream(path, System.IO.FileMode.Create, System.IO.FileAccess.Write);
-            StreamWriter writer = new StreamWriter(stream, System.Text.Encoding.UTF8);
 
-            for (int i = 0; i < Hospital.patients.Count; i++)
+            try
             {
-                string dataStr = string.Empty;
-                dataStr += Hospital.patients[i].ID.ToString() + ",";
-                dataStr += Hospital.patients[i].Name.ToString() + ",";
-                dataStr += Hospital.patients[i].Details.ToString() + ",";
-                dataStr += Hospital.patients[i].Rfv.ToString() + ",";
-                dataStr += Hospital.patients[i].LongTerm.ToString() + ",";
-                dataStr += Hospital.patients[i].Discharged.ToString() + ",";
-                dataStr += Hospital.patients[i].Doctor.ToString();
-                writer.WriteLine(dataStr);
+
+                FileStream stream = new FileStream(path, System.IO.FileMode.Create, System.IO.FileAccess.Write);
+                StreamWriter writer = new StreamWriter(stream, System.Text.Encoding.UTF8);
+
+                for (int i = 0; i < Hospital.patients.Count; i++)
+                {
+                    string dataStr = string.Empty;
+                    dataStr += Hospital.patients[i].ID.ToString() + ",";
+                    dataStr += Hospital.patients[i].Name.ToString() + ",";
+                    dataStr += Hospital.patients[i].Details.ToString() + ",";
+                    dataStr += Hospital.patients[i].Rfv.ToString() + ",";
+                    dataStr += Hospital.patients[i].LongTerm.ToString() + ",";
+                    dataStr += Hospital.patients[i].Discharged.ToString() + ",";
+                    dataStr += Hospital.patients[i].Doctor.ToString();
+                    writer.WriteLine(dataStr);
+                }
+                writer.Close();
             }
-            writer.Close();
+            catch
+            {
+                MessageBox.Show("Data File not found");
+            }
 
         }
     }

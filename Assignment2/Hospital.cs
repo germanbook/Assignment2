@@ -19,7 +19,7 @@ namespace Assignment2
     public partial class Hospital : Form
     {
         public static List<Patient> patients = Functions.LoadingData();
-
+        
         public Hospital()
         {
             InitializeComponent();
@@ -162,7 +162,14 @@ namespace Assignment2
         // Save data button
         private void pictureBox2_Save_MouseClick(object sender, MouseEventArgs e)
         {
-            Functions.SaveData();
+            try
+            {
+                Functions.SaveData();
+            }
+            catch
+            {
+                MessageBox.Show("Data File not found");
+            }
             MessageBox.Show("Data saved !");
         }
 
