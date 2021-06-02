@@ -26,11 +26,13 @@ New patients are given a unique ID based on system date and time.
 Features
 ----------------------
 
-This app uses a csv file as the database to store data. There are several demo data in the file. The patient data entered by the user during the app running is stored in this file.
+This app uses a csv file as the database to store data. This file has some demo data pre-loaded. The patient data entered by the user during the app running is stored in this file.
 
-User can manually save the data while the application is running, by clicking the save icon.
+The user can manually save the data while the application is running, by clicking the save icon.
 
-When the user clicks the window “Close” button or “Exit” button on the main menu, the application will detect whether the user has changed or added patient data. If the data is changed, the user is reminded whether to save it, and if the user just browses the data without making changes, the application will be terminated directly. This function is realized by comparing the data at runtime with the data stored in the file.
+When the user clicks the window “Close” button or “Exit” button on the main menu, the application will detect whether the user has changed or added patient data. If any patient data has been changed, the user is reminded to save any changes.
+
+if the user just browsed patient data the prompt does not appear.
 
 
 
