@@ -1,10 +1,10 @@
-# Assignment2 - Patient Register
+# Assignment 2 - Patient Register
 
 This is a patient registry for a hospital.
 
 Users can run this app using a .exe file.
 
-With this app a user can add new patients, update existing entries, designate a patient as dicharged, and view separate lists of long-term, day paitent, and discharged patients.
+With this app a user can add new patients, update existing entries, designate a patient as discharged, and view separate lists of long-term, day patient, and discharged patients.
 
 Users can search for patients using either name or patient ID with the “Search and Update” button.
 
@@ -16,7 +16,7 @@ Users can discharge a patient by searching and selecting a patient and clicking 
 
 Users can create a new patient by clicking the "New Patient" button.
 
-This opens new window where a user can enter the paient's details in fields.
+This opens new window where a user can enter the patient's details in fields.
 
 Required fields are marked and must be filled, if they are not filled, an alert informs the user they must be filled.
 
