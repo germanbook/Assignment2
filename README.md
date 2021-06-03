@@ -1,6 +1,6 @@
 # Assignment 2 - Patient Register
 
-This is a patient registry for a hospital.
+This is a Patient Register for a hospital.
 
 Users can run this app using a .exe file.
 
