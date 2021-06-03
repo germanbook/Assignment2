@@ -32,7 +32,7 @@ The user can manually save the data while the application is running, by clickin
 
 When the user clicks the window “Close” button or “Exit” button on the main menu, the application will detect whether the user has changed or added patient data. If any patient data has been changed, the user is reminded to save any changes.
 
-If the user just browsed patient data, without chaging any data, the prompt does not appear.
+If the user just browsed patient data, without changing any data, the prompt does not appear.
 
 
 
